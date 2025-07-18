@@ -26,19 +26,52 @@
 
 
   <!-- Header -->
-<header id="site-header" class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow p-4 flex justify-between items-center opacity-0 transition-opacity duration-500">
-    <h1 class="text-xl font-bold tracking-wide uppercase text-blue-600">RL<span class="text-gray-800 dark:text-gray-100">Designs</span></h1>
+<header id="site-header" class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow p-4 flex justify-between items-center">
+  <!-- Logo -->
+  <h1 class="text-xl font-bold tracking-wide uppercase text-blue-600">
+    RL<span class="text-gray-800 dark:text-gray-100">Designs</span>
+  </h1>
 
-    <nav class="space-x-4">
-      <a href="#home" class="hover:underline">Home</a>
-      <a href="#projects" class="hover:underline">Projects</a>
-      <a href="#skills" class="hover:underline">Skills</a>
-      <a href="#about" class="hover:underline">About</a>
-      <a href="#contact" class="hover:underline">Contact</a>
-      <a href="https://drive.google.com/file/d/1GvsPQiq4Mc14wgroQ4rmCk800HPj5f_j/view?usp=drive_link" target="_blank" class="hover:underline">Resume</a>
-      <button onclick="document.documentElement.classList.toggle('dark')" class="ml-4 px-3 py-1 border rounded hover:bg-gray-200 dark:hover:bg-gray-700">Toggle Theme</button>
-    </nav>
-  </header>
+  <!-- Desktop Nav -->
+  <nav class="hidden md:flex space-x-4 items-center">
+    <a href="#home" class="hover:underline">Home</a>
+    <a href="#projects" class="hover:underline">Projects</a>
+    <a href="#skills" class="hover:underline">Skills</a>
+    <a href="#about" class="hover:underline">About</a>
+    <a href="#contact" class="hover:underline">Contact</a>
+    <a href="https://drive.google.com/file/d/1GvsPQiq4Mc14wgroQ4rmCk800HPj5f_j/view?usp=drive_link" target="_blank" class="hover:underline">Resume</a>
+    <button onclick="document.documentElement.classList.toggle('dark')" class="ml-4 px-3 py-1 border rounded hover:bg-gray-200 dark:hover:bg-gray-700">Toggle Theme</button>
+  </nav>
+
+  <!-- Mobile Hamburger -->
+  <div class="md:hidden relative">
+    <button id="menu-toggle" class="text-gray-800 dark:text-gray-100 focus:outline-none">
+      <!-- Hamburger Icon -->
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div id="mobile-menu"
+      class="absolute top-10 right-0 w-52 bg-white dark:bg-gray-800 rounded-b-lg shadow-lg p-4 space-y-3 hidden z-50">
+      <a href="#home" class="block hover:underline">Home</a>
+      <a href="#projects" class="block hover:underline">Projects</a>
+      <a href="#skills" class="block hover:underline">Skills</a>
+      <a href="#about" class="block hover:underline">About</a>
+      <a href="#contact" class="block hover:underline">Contact</a>
+      <a href="https://drive.google.com/file/d/1GvsPQiq4Mc14wgroQ4rmCk800HPj5f_j/view?usp=drive_link" target="_blank" class="block hover:underline">Resume</a>
+      <button onclick="document.documentElement.classList.toggle('dark')"
+        class="w-full text-left px-2 py-1 border rounded hover:bg-gray-200 dark:hover:bg-gray-700">
+        Toggle Theme
+      </button>
+    </div>
+  </div>
+</header>
+
+
 
   <!-- Hero Section -->
   <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
@@ -57,10 +90,10 @@
   </section>
 Video by Vecteezy
 
-<section class="flex items-center justify-center px-6 py-24 gap-12">
+<section class="flex flex-col md:flex-row items-center justify-center px-4 md:px-6 py-12 md:py-24 gap-8 md:gap-12">
 
   <!-- Phone Container -->
-  <div class="phone-container relative w-[90vw] max-w-[360px] h-auto aspect-[9/18] rounded-[8vw] bg-gradient-to-b from-gray-800 to-black shadow-2xl shadow-purple-700 md:rounded-[40px]" style="perspective: 1200px;">
+  <div class="phone-container relative w-full max-w-[360px] h-auto aspect-[9/18] rounded-[8vw] bg-gradient-to-b from-gray-800 to-black shadow-2xl shadow-purple-700 md:rounded-[40px]" style="perspective: 1200px;">
     <div class="phone-frame absolute inset-0 rounded-[40px] border-4 border-gray-700 bg-gradient-to-tr from-gray-900 to-gray-800 shadow-inner">
 
       <!-- Notch -->
@@ -103,7 +136,7 @@ Video by Vecteezy
   </div>
 
   <!-- iPad Container -->
-  <div class="ipad-container relative w-[90vw] max-w-[480px] h-auto aspect-[3/4] rounded-[10vw] bg-gradient-to-b from-gray-900 to-gray-700 shadow-2xl shadow-purple-800 md:rounded-[48px]">
+   <div class="ipad-container relative w-full max-w-[480px] h-auto aspect-[3/4] rounded-[10vw] bg-gradient-to-b from-gray-900 to-gray-700 shadow-2xl shadow-purple-800 md:rounded-[48px]">
     <div class="ipad-frame absolute inset-0 rounded-[48px] border-6 border-gray-600 bg-gradient-to-tr from-gray-800 to-gray-600 shadow-inner">
       
       <!-- iPad notch -->
@@ -147,6 +180,8 @@ Video by Vecteezy
   .animate-glossyShine {
     background-size: 200% 100%;
     animation: glossyShine 6s linear infinite;
+    -webkit-animation: glossyShine 6s linear infinite;
+          animation: glossyShine 6s linear infinite;
   }
 
   /* Glowing button pulse */
@@ -168,6 +203,9 @@ Video by Vecteezy
   .phone-container:hover {
     transform-style: preserve-3d;
     transform-origin: center center;
+    will-change: transform;
+    -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
     /* rotate-y defined inline for smoother hover */
   }
 
@@ -378,7 +416,21 @@ setTimeout(() => {
 
 </script>
 
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
 
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Hide menu when clicking a link inside it
+  mobileMenu.querySelectorAll('a, button').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+</script>
 
 </body>
 </html>
