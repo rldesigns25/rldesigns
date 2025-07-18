@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryan Lawhead | Web Designer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition duration-300 ease-in-out font-sans">
+
+<div id="loader" class="fixed inset-0 bg-white dark:bg-gray-900 flex flex-col justify-center items-center z-50">
+  <h1 class="text-6xl font-bold tracking-wide uppercase text-blue-600">RL<span class="text-gray-800 dark:text-gray-100">Designs</span></h1>
+
+  <div class="w-64 h-2 bg-gray-300 rounded-full overflow-hidden">
+    <div id="loader-bar" class="h-full bg-blue-600 w-0"></div>
+  </div>
+</div>
+
+
+  <!-- Header -->
+<header id="site-header" class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow p-4 flex justify-between items-center opacity-0 transition-opacity duration-500">
+    <h1 class="text-xl font-bold tracking-wide uppercase text-blue-600">RL<span class="text-gray-800 dark:text-gray-100">Designs</span></h1>
+
+    <nav class="space-x-4">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#projects" class="hover:underline">Projects</a>
+      <a href="#skills" class="hover:underline">Skills</a>
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+      <a href="https://drive.google.com/file/d/1GvsPQiq4Mc14wgroQ4rmCk800HPj5f_j/view?usp=drive_link" target="_blank" class="hover:underline">Resume</a>
+      <button onclick="document.documentElement.classList.toggle('dark')" class="ml-4 px-3 py-1 border rounded hover:bg-gray-200 dark:hover:bg-gray-700">Toggle Theme</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
+    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-30 z-0">
+  <source src="../assets/videos/video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div class="relative z-10">
+  <img src="../assets/images/ryan.png" alt="Ryan Lawhead" class="w-64 h-64 mx-auto rounded-full shadow-md mb-6 border-4 border-blue-600 dark:border-blue-400" />
+  <h2 class="text-5xl font-bold mb-4 animate-fade-in-down">Ryan Lawhead</h2>
+    <p class="text-2xl mb-6 animate-fade-in-up">Web Designer / Software Developer</p>
+    <p class="max-w-xl mb-6 animate-fade-in-up delay-200">I’m trying to land my first web design job to gain hands-on industry experience and grow my design skill set.</p>
+    <a href="#projects" class="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition animate-fade-in-up delay-300">View My Work</a>
+</div>
+  </section>
+Video by Vecteezy
+
+<section class="flex items-center justify-center px-6 py-24 gap-12">
+
+  <!-- Phone Container -->
+  <div class="phone-container relative w-[360px] h-[720px] rounded-[40px] bg-gradient-to-b from-gray-800 to-black shadow-2xl shadow-purple-700" style="perspective: 1200px;">
+    <div class="phone-frame absolute inset-0 rounded-[40px] border-4 border-gray-700 bg-gradient-to-tr from-gray-900 to-gray-800 shadow-inner">
+
+      <!-- Notch -->
+      <div class="notch absolute top-4 left-1/2 transform -translate-x-1/2 w-44 h-10 bg-black rounded-b-3xl border border-gray-700 shadow-lg flex justify-center items-center z-20">
+        <div class="camera w-5 h-5 bg-gray-600 rounded-full shadow-inner mr-6"></div>
+        <div class="speaker w-16 h-2 bg-gray-600 rounded-full shadow-inner"></div>
+      </div>
+
+      <!-- Side buttons -->
+      <div class="side-buttons absolute left-0 top-28 flex flex-col gap-8">
+        <div class="btn h-14 w-3 rounded-r-full bg-gray-700 shadow-md"></div>
+        <div class="btn h-10 w-3 rounded-r-full bg-gray-700 shadow-md"></div>
+      </div>
+      <div class="side-buttons absolute right-0 top-40">
+        <div class="btn h-24 w-3 rounded-l-full bg-gray-700 shadow-md"></div>
+      </div>
+
+      <!-- Screen -->
+      <div class="screen absolute top-20 left-6 right-6 bottom-16 bg-gradient-to-b from-purple-900 via-black to-purple-900 rounded-3xl overflow-hidden shadow-lg border border-purple-600 shadow-purple-700 flex flex-col">
+        <div class="glossy-overlay absolute inset-0 pointer-events-none bg-gradient-to-tr from-white/10 to-transparent rounded-3xl animate-glossyShine"></div>
+        <div class="iframe-wrapper relative rounded-3xl overflow-auto flex-1">
+          <iframe 
+            src="https://rslhead20.github.io/local-roots/#" 
+            class="w-full h-full rounded-3xl" 
+            frameborder="0" 
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups" 
+            allowfullscreen
+            scrolling="yes"
+          ></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Centered text -->
+  <div class="devices-text max-w-sm text-center text-purple-500 select-none hidden md:flex flex-col justify-center px-8">
+    <p class="text-lg font-semibold mb-2">Use these devices to explore another project of mine.</p>
+    <p class="text-sm opacity-75">The devices are fully interactive!</p>
+  </div>
+
+  <!-- iPad Container -->
+  <div class="ipad-container relative w-[480px] h-[640px] rounded-[48px] bg-gradient-to-b from-gray-900 to-gray-700 shadow-2xl shadow-purple-800">
+    <div class="ipad-frame absolute inset-0 rounded-[48px] border-6 border-gray-600 bg-gradient-to-tr from-gray-800 to-gray-600 shadow-inner">
+      
+      <!-- iPad notch -->
+      <div class="notch absolute top-6 left-1/2 transform -translate-x-1/2 w-48 h-8 bg-black rounded-b-2xl border border-gray-600 shadow-lg flex justify-center items-center z-20">
+        <div class="camera w-6 h-6 bg-gray-700 rounded-full shadow-inner mr-8"></div>
+        <div class="speaker w-20 h-2 bg-gray-700 rounded-full shadow-inner"></div>
+      </div>
+      
+      <!-- Screen -->
+      <div class="screen absolute top-16 left-8 right-8 bottom-16 bg-black rounded-3xl overflow-hidden shadow-lg border border-gray-700">
+        <iframe 
+          src="https://rslhead20.github.io/local-roots/#" 
+          class="w-full h-full rounded-3xl" 
+          frameborder="0" 
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups" 
+          allowfullscreen
+          scrolling="yes"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<style>
+  /* Ambient glow pulse */
+  @keyframes pulseGlow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+  }
+  .animate-pulseGlow {
+    animation: pulseGlow 4s ease-in-out infinite;
+  }
+
+  /* Glossy shine sweeping */
+  @keyframes glossyShine {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .animate-glossyShine {
+    background-size: 200% 100%;
+    animation: glossyShine 6s linear infinite;
+  }
+
+  /* Glowing button pulse */
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow: 0 0 10px #9b59b6;
+      background-color: #00f73e;
+    }
+    50% {
+      box-shadow: 0 0 20px #bb8fce;
+      background-color: #00f73e;
+    }
+  }
+  .animate-glowPulse {
+    animation: glowPulse 3.5s ease-in-out infinite;
+  }
+
+  /* 3D rotation on hover */
+  .phone-container:hover {
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    /* rotate-y defined inline for smoother hover */
+  }
+
+  /* Side buttons and notch styles */
+  .btn {
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #00f73e;
+    box-shadow: 0 0 8px #00f73e;
+  }
+</style>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 px-6 bg-gray-100 dark:bg-gray-800">
+    <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold mb-2">🌱 Local Roots</h3>
+        <p class="mb-2 text-sm">This is a fully responsive website I built to showcase a modern, community-driven marketplace for local produce and goods. The design emphasizes fresh visuals, clean structure, and user-friendly navigation. It includes a dynamic product section, vendor highlights, and a newsletter signup to encourage ongoing engagement.
+                            This project helped me practice responsive layout design, semantic HTML structure, and custom styling with CSS, while also incorporating a mobile-friendly hamburger menu using vanilla JavaScript.</p>
+        <div class="text-sm text-gray-500 mb-2">Tools: HTML, CSS, Javascript</div>
+        <div class="flex gap-4">
+          <a href="https://rslhead20.github.io/local-roots/#" class="text-blue-600 hover:underline">Live Site</a>
+          <a href="https://github.com/Rslhead20" class="text-blue-600 hover:underline">GitHub</a>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold mb-2">🍕 Pizza Order Chatbot</h3>
+        <p class="mb-2 text-sm">This is a fun little terminal-based project I created to practice Python fundamentals like input validation, loops, conditionals, and user interaction. The chatbot guides users through a pizza ordering process, calculating cost, applying delivery fees, and even simulating a countdown timer until the pizza is “ready.” It also includes some personality — with a special message if you enter my name!</p>
+        <div class="text-sm text-gray-500 mb-2">Tools: Python (Terminal-based)</div>
+        <div class="flex gap-4">
+          <a href="https://github.com/Rslhead20/CIS110-Pizza-Ordering-Chatbot/blob/master/CIS110_Pizza_Ordering_Chatbot.py" class="text-blue-600 hover:underline">GitHub</a>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold mb-2">🧮 Factorial Calculator – Iterative vs. Recursive</h3>
+        <p class="mb-2 text-sm">This Python program demonstrates two fundamental approaches to calculating factorials: iteration using a while loop, and recursion using a self-calling function. It outputs the factorials of several integers (from 3 to 50) to compare the results and performance of both methods.
+                  This project helped reinforce my understanding of loop control structures and recursive logic — two key concepts in computer science. It also highlights how different approaches can solve the same problem with varying complexity and efficiency.</p>
+        <div class="text-sm text-gray-500 mb-2">Tools: Python</div>
+        <div class="text-sm text-gray-500 mb-2">Topics: Iteration, Recursion, Function Design</div>
+        <div class="flex gap-4">
+          <a href="https://github.com/Rslhead20/IterationAndRecursion/blob/master/IterationAndRecursion.py" class="text-blue-600 hover:underline">GitHub</a>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold mb-2">🎲 Number Guessing Game</h3>
+        <p class="mb-2 text-sm">This Python program implements a classic number guessing game where the user sets an upper limit, and the computer selects a random number within that range. The player attempts to guess the number, receiving feedback if their guess is too high or too low, until they guess correctly. The program tracks the number of attempts and offers the option to play multiple rounds.
+                This project helped me practice handling user input, control flow with loops and conditionals, and using the random module to generate unpredictable values.</p>
+        <div class="text-sm text-gray-500 mb-2">Tools: Python</div>
+        <div class="text-sm text-gray-500 mb-2">Topics: User Input, Loops, Conditionals, Random Number Generation</div>
+        <div class="flex gap-4">
+          <a href="https://github.com/Rslhead20/GuessingGame/blob/master/GuessingGame/GuessingGame.py" class="text-blue-600 hover:underline">GitHub</a>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold mb-2">👕 Simple Clothing Store Web App</h3>
+        <p class="mb-2 text-sm">This is a web application built using Flask that simulates a basic online clothing store. Users can browse a catalog of clothing items, add products to a shopping cart, remove items, and proceed to checkout. The app uses session management to track the cart contents across pages, calculates totals, and applies a discount for orders over $100.
+                    This project helped me practice backend web development fundamentals, including routing, session handling, dynamic templating with Jinja2, and basic e-commerce logic.</p>
+        <div class="text-sm text-gray-500 mb-2">Tools: Python, Flask, Jinja2, HTML/CSS (for templates)</div>
+        <div class="text-sm text-gray-500 mb-2">Concepts: Web Framework, Sessions, Routing, State Management</div>
+        <div class="flex gap-4">
+          <a href="https://github.com/Rslhead20/Clothing-Application/blob/main/app.py" class="text-blue-600 hover:underline">GitHub</a>
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold mb-2">📊 Employee Payroll Report System</h3>
+        <p class="mb-2 text-sm">This Python program manages employee payroll data by collecting work periods, hours worked, pay rates, and tax rates. It calculates gross pay, income tax, and net pay for each employee and generates detailed reports based on user-specified date ranges or for all records. The program supports adding new user login information, validates input data, and saves employee payroll data to a file using pipe-delimited formatting.
+                    This project helped me practice file handling, data validation, user input management, and modular programming with functions, while simulating real-world payroll processing and reporting.</p>
+        <div class="text-sm text-gray-500 mb-2">Tools: Python</div>
+        <div class="text-sm text-gray-500 mb-2">Concepts: File I/O, Data Validation, Date Handling, Modular Code, Reporting</div>
+        <div class="flex gap-4">
+          <a href="https://github.com/Rslhead20/CIS261-Course-Project/blob/master/CIS261_Course_Project.py" class="text-blue-600 hover:underline">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-16 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Skills</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-lg justify-items-center">
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">Conditionals</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">CSS</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">Data Validation</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">Date Handling</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">Function Design</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">HTML</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">Iteration</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">JavaScript</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">Loops</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">Python</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">Python (Terminal-based)</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">Recursion</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">Reporting</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">Routing</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">User Input</span>
+    <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl dark:transition-colors" data-aos="zoom-in">Web Framework</span>
+  </div>
+</section>
+
+
+  <!-- About Section -->
+  <section id="about" class="py-16 px-6 max-w-3xl mx-auto text-center">
+  <h2 class="text-3xl font-bold mb-6">About Me</h2>
+  <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+    I am a passionate, self-taught web designer and software developer dedicated to crafting responsive, accessible, and visually compelling digital experiences. With a strong commitment to clean code and user-centric design, I thrive on turning creative ideas into functional, elegant solutions. Currently, I am actively seeking my first professional role where I can leverage my skills, continue learning, and contribute meaningfully to a dynamic, collaborative development team. Eager to grow as a developer, I am ready to bring fresh perspectives and a strong work ethic to any project or organization.
+  </p>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-200 dark:bg-gray-800 py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+    <p class="mb-4">📧 <a href="mailto:Rslhead20@icloud.com" class="text-blue-600 hover:underline">Rslhead20@icloud.com</a></p>
+    <p class="mb-4">☏ 469-261-9423<a class="text-blue-600 hover:underline"></a>
+    <div class="flex justify-center gap-6 mt-4">
+      <a href="https://www.linkedin.com/in/ryan-lawhead-289477306/" target="_blank" class="hover:underline">LinkedIn</a>
+      <a href="https://github.com/Rslhead20" target="_blank" class="hover:underline">GitHub</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-sm text-gray-600 dark:text-gray-400">
+    © 2025 Ryan Lawhead. All rights reserved.
+  </footer>
+
+  <!-- Animations -->
+  <style>
+    .animate-fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+    .animate-fade-in-down {
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInDown 0.8s forwards;
+    }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #loader h1 {
+    letter-spacing: 2px;
+    }
+
+    @keyframes loaderFill {
+    0% { width: 0%; }
+    100% { width: 100%; }
+    }
+
+    #loader-bar {
+    animation: loaderFill 5s linear forwards;
+    }
+
+    body.loaded #loader {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    }
+  </style>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+<script>
+const loader = document.getElementById('loader');
+const header = document.getElementById('site-header');
+
+function finishLoading() {
+  clearTimeout(loaderTimeout);
+  
+  // Fade out loader
+  loader.style.transition = 'opacity 0.5s ease';
+  loader.style.opacity = 0;
+
+  setTimeout(() => {
+    loader.style.display = 'none';
+    // Fade in header by switching opacity classes
+    header.classList.remove('opacity-0');
+    header.classList.add('opacity-100');
+  }, 500);
+}
+let loaderTimeout = setTimeout(() => {
+  finishLoading();
+}, 5000);
+
+setTimeout(() => {
+  window.addEventListener('scroll', finishLoading, { once: true });
+  window.addEventListener('click', finishLoading, { once: true });
+}, 5000);
+
+</script>
+
+
+
+</body>
+</html>
